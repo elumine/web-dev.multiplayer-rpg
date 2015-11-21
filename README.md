@@ -29,5 +29,7 @@ Dependencies
 + static
 + ws
 
+*not a final version with minor 
+
 --
 Developed in 2014
