@@ -1,0 +1,697 @@
+*
+	position: absolute
+	margin: 0
+	padding: 0
+	border: 0
+	outline: 0
+	background-size: 100% 100%	
+
+body
+	padding: 0
+	margin: 0
+	background-color: #000
+	color: #eee
+	overflow: hidden
+
+textarea
+	resize: none
+	overflow: hidden
+
+
+
+
+.underline
+	border-bottom: #888 solid 1px
+
+.gray-light
+	color: #aaa
+	
+.gray
+	color: #888
+
+.hide
+	display: none
+
+.pointer
+	cursor: pointer
+
+.ui_menu
+	position: static
+
+.ui_textareaWrapper
+	width: 23%
+	height: 6%
+	background-image: url("../assets/ui/auth-textarea.png")
+
+.ui_textarea
+	position: absolute
+	width: 80%
+	height: 60%
+	left: 10%
+	top: 25%
+	color: #eee
+	background-color: transparent
+
+.ui_button1, .ui_button2
+	background-image: url('../assets/ui/button.png')
+
+.ui_button1:hover, .ui_button2:hover
+	background-image: url('../assets/ui/button-hover.png')
+
+.ui_button1 > .text, .ui_button2 > .text
+	position: absolute
+	width: 100%
+	height: 50%
+	left: 0%
+	top: 27.5%
+	color: #888
+	letter-spacing: 1px
+	text-align: center
+
+.ui_button1
+	width: 18%
+	height: 6%
+	font-size: 14px
+
+.ui_button2
+	width: 14%
+	height: 5%
+	font-size: 12px
+
+.ui_button3
+	width: 1.8%
+	height: 70%
+	left: 1%
+	top: 10%
+	display: none
+
+.ui_field1
+	background-image: url("../assets/ui/field1.png")	
+
+.ui_topBar
+	width: 100%
+	height: 5%
+	left: 0%
+	top: 0%
+	background-image: url("../assets/ui/topbar.png")
+
+.ui_background, .ui_backgroundScreen
+	width: 100%
+	height: 100%
+	left: 0%
+	top: 0%
+
+.ui_backgroundScreen
+	z-index: 2
+
+.ui_background
+	z-index: 1
+
+
+
+
+#localizationMenu, #infoWindow, #gameMenu_userBar_abilities_item_label
+	z-index: 10
+
+#mainMenu_help, .modelSetItem, #mainMenu_characterModel,
+#scaleRange, .anouncement,
+#gameMenu_userBar, #gameMenu_userBar_abilities, #gameMenu_userBar_effects,
+#gameMenu_statisticTable, #gameMenu_statisticMenu, #gameMenu_abilitiesMenu,
+.ui_textareaWrapper, .ui_button1, .ui_button2, .ui_topBar, #globalShader
+	z-index: 3
+
+#infoBar, #clientStatusWrapper,
+#mainMenu_loadWindow, #poster
+	z-index: 4
+
+
+
+
+#preloader
+	position: absolute
+	width: 5%
+	height: 10%
+	left: 47.5%
+	top: 45%
+	z-index: 10
+
+
+
+#wrapper
+	position: fixed
+	width: 100%
+	height: 100%
+	left: 0px
+	top: 0px
+
+
+
+
+#poster
+	width: 50%
+	height: 50%
+	left: 25%
+	top: 25%
+	display: none
+
+#globalShader
+	width: 100%
+	height: 100%
+	left: 0%
+	top: 0%
+	background-color: #000
+	opacity: 0.5
+	display: none
+
+
+
+#localizationMenu
+	width: 16%
+	height: 4%
+	left: 25%
+	top: 0%
+	z-index: 10
+	display: none
+
+.localizationMenuWrapper
+	width: 10%
+	height: 80%
+	top: 10%
+
+
+.localizationMenu_item
+	position: absolute
+	widows: 100%
+	height: 100%
+	top: 0%
+	left: 0%
+	z-index: 2
+
+.localizationMenu_bg
+	position: absolute
+	width: 100%
+	height: 100%
+	top: 0%
+	left: 0%
+	z-index: 1
+	display: none
+
+
+.localizationMenuWrapperActive
+	display: block
+
+.localizationMenuWrapperPassive
+	display: none
+
+.localizationMenuWrapperActive > .localizationMenu_item, .localizationMenuWrapper > .localizationMenu_item:hover
+	opacity: 0.9
+
+.localizationMenuWrapperPassive > .localizationMenu_item, .localizationMenu_item
+	opacity: 0.5
+
+
+#localizationMenuWrapper_en
+	left: 5%
+
+#localizationMenuWrapper_ru
+	left: 20%
+
+#localizationMenuWrapper_ua
+	left: 35%
+
+
+
+
+
+#infoWindow
+	width: 20%
+	height: 20%
+	left: 10%
+	top: 10%
+	display: none
+
+.infoWindowLabel
+	width: 50%
+	height: 40%
+	left: 25%
+	font-size: 1em
+	letter-spacing: 0.2em
+	top: 30%
+	text-align: center
+
+.infoWindowLabel > span
+	position: static
+
+
+
+
+
+#infoBar, #clientStatusWrapper
+	font-size: 10pt
+	color: #fff
+	height: 25px
+	top: 0px
+
+#infoBar
+	width: 300px
+	right: 0px
+	display: none
+
+#serverStatusWrapper
+	width: 100px
+	right: 150px
+
+#pingWrapper
+	width: 75px
+	right: 75px
+
+#fpsWrapper
+	width: 50px
+	right: 25px
+
+#serverStatusWrapper, #clientStatusWrapper, #pingWrapper, #fpsWrapper
+	top: 15%
+	height: 70%
+	opacity: 0.5
+
+#clientStatusWrapper
+	width: 150px
+	right: 325px
+
+#clientStatusWrapper > span > span
+	position: static
+
+#gameStatusWrapper
+	display: none
+
+
+
+
+
+
+#authMenu
+	display: none
+
+#authMenu_textareaLoginWrapper
+	left: 38.5%
+	top: 42%
+	
+#authMenu_textareaPasswordWrapper
+	left: 38.5%
+	top: 53%
+	
+#authMenu_buttonLogin
+	left: 41%
+	top: 65%
+	
+#authMenu_buttonRegister
+	right: 2.5%
+	bottom: 19%
+	
+#authMenu_buttonTrailer
+	right: 2.5%
+	bottom: 10%
+
+
+
+
+
+
+#mainMenu
+	display: none
+
+#mainMenu_buttonGameMenu
+	background-image: url(../assets/ui/mainMenu_buttonGameMenu.png)
+
+#mainMenu_help
+	width: 35%
+	height: 50%
+	right: 5%
+	top: 15%
+
+.modelSetItem
+	width: 5%
+	height: 10%
+	opacity: 0.5
+
+.modelSetItemSelected
+	opacity: 1
+
+#modelSetItem1
+	left: 15%
+	top: 35%
+	background-color: #f00
+
+#modelSetItem2
+	left: 15%
+	top: 50%
+	background-color: #ff0
+
+
+#mainMenu_characterModel
+	width: 15%
+	height: 45%
+	left: 26%
+	bottom: 18%
+
+#mainMenu_characterModel_canvas
+	position: absolute
+	width: 100%
+	height: 100%
+	left: 0%
+	top: 0%
+
+#mainMenu_buttonJoinGame, #mainMenu_buttonLeaveGame
+	left: 40%
+	bottom: 10%
+
+#mainMenu_buttonLeaveGame
+	display: none
+
+#mainMenu_buttonTrailer
+	right: 2.5%
+	bottom: 19%
+
+#mainMenu_buttonLogout
+	right: 2.5%
+	bottom: 10%
+
+
+#mainMenu_loadWindow
+	width: 50%
+	height: 50%
+	left: 25%
+	top: 25%
+	display: none
+
+#mainMenu_loadWindow_header
+	width: 60%
+	height: 10%
+	left: 20%
+	top: 10%
+	text-align: center
+
+
+#mainMenu_loadWindow_characters
+	left: 20%
+	top: 35%
+	width: 60%
+	height: 65%
+
+.mainMenu_loadWindow_charactersItem
+	position: relative
+	width: 80%
+	height: 7.5%
+	left: 10%
+
+.mainMenu_loadWindow_charactersItemLabel
+	position: absolute
+	width: 30%
+	height: 100%
+	left: 0%
+	top: 0%
+	text-align: center
+
+.mainMenu_loadWindow_charactersItemProgressWrapper
+	position: absolute
+	width: 60%
+	height: 100%
+	left: 40%
+	top: 0%
+	background-color: #333
+
+.mainMenu_loadWindow_charactersItemProgressBar
+	position: absolute
+	width: 0%
+	height: 100%
+	left: 0%
+	top: 0%
+	background-color: #1af
+
+
+
+#gameMenu
+	display: none
+
+#scaleRange
+	position: absolute
+	right: 2.5%
+	bottom: 5%
+
+.anouncement
+	width: 25%
+	height: 4%
+	left: 37.5%
+	top: 15%
+	display: none
+
+#gameMenu_userBar
+	width: 10%
+	height: 20%
+	left: 45%
+	bottom: 5%
+
+#gameMenu_userBar_abilities_item_label
+	width: 5%
+	height: 5%
+	display: none
+
+#gameMenu_userBar_front
+	width: 100%
+	height: 100%
+	left: 0%
+	top: 0%
+	background-image: url("../assets/ui/gameMenu_userBar_front.png")
+
+
+
+#gameMenu_userBar_abilities
+	position: static
+
+
+.gameMenu_userBar_abilities_item
+	width: 35%
+	height: 35%
+	border-radius: 1000px
+	overflow: hidden
+
+#gameMenu_userBar_abilities_item1
+	left: -40%
+	top: 0%
+
+#gameMenu_userBar_abilities_item2
+	left: -40%
+	top: 40%
+
+#gameMenu_userBar_abilities_item3
+	left: -40%
+	top: 60%
+
+#gameMenu_userBar_abilities_item4
+	left: -40%
+	top: 110%
+
+#gameMenu_userBar_abilities_item5
+	left: 110%
+	top: 0%
+
+.gameMenu_userBar_abilities_item_shader
+	width: 100%
+	height: 100%
+	left: 0%
+	top: 0%
+	z-index: 1
+	opacity: 0.5
+	background-color: #000
+
+.gameMenu_userBar_abilities_item_bg
+	width: 100%
+	height: 100%
+	left: 0%
+	top: 0%
+	z-index: 0
+
+
+
+#gameMenu_userBar_effects
+	width: 40%
+	height: 6%
+	left: 2.5%
+	bottom: 2.5%
+
+.gameMenu_userBar_effects_item
+	width: 8%
+	height: 100%
+	top: 0%
+	border-radius: 1000px
+
+#gameMenu_userBar_effects_item1
+	left: 0%
+
+#gameMenu_userBar_effects_item2
+	left: 10%
+
+#gameMenu_userBar_effects_item3
+	left: 20%
+
+#gameMenu_userBar_effects_item4
+	left: 30%
+
+#gameMenu_userBar_effects_item5
+	left: 40%
+
+#gameMenu_userBar_hp_wrapper
+	width: 70%
+	height: 70%
+	left: 15%
+	top: 15%
+	border-radius: 1000px
+	overflow: hidden
+	background-color: #000
+
+#gameMenu_userBar_hp_canvas
+	width: 100%
+	height: 100%
+	left: 0%
+	top: 0%
+
+#gameMenu_buttonMainMenu
+	display: block
+	background-image: url(../assets/ui/gameMenu_buttonMainMenu.png)
+
+#gameMenu_timeBar
+	width: 10%
+	height: 70%
+	left: 45%
+	top: 15%
+	text-align: center
+	opacity: 0.5
+
+#canvas
+	position: static
+	left: 0px
+	top: 0px
+	background-color: #000
+
+#gameMenu_statisticTable
+	width: 5%
+	height: 20%
+	left: 2.5%
+	top: 10%
+
+.gameMenu_statisticTableItem
+	position: relative
+	width: 100%
+	height: 15%
+	left: 0px
+	top: 0px
+
+.gameMenu_statisticTableItemLeft
+	position: absolute
+	width: 80%
+	height: 100%
+	left: 0%
+	top: 0%
+
+.gameMenu_statisticTableItemRight
+	position: absolute
+	width: 20%
+	height: 100%
+	right: 0%
+	top: 0%
+
+#gameMenu_statisticMenu
+	width: 40%
+	height: 40%
+	left: 30%
+	top: 25%
+	display: none
+
+#gameMenu_statisticMenu_header
+	width: 50%
+	height: 10%
+	left: 25%
+	top: 10%
+	text-align: center
+
+#gameMenu_statisticMenu_wrapper
+	width: 80%
+	height: 40%
+	left: 10%
+	top: 30%
+
+#gameMenu_statisticMenu_button
+	width: 30%
+	height: 15%
+	left: 35%
+	bottom: 5%
+	
+#gameMenu_abilitiesMenu
+	width: 30%
+	height: 40%
+	left: 35%
+	top: 30%
+	display: none
+
+#gameMenu_abilitiesMenu_header
+	width: 50%
+	height: 10%
+	left: 25%
+	top: 5%
+	text-align: center
+
+#gameMenu_abilitiesMenu_wrapper
+	position: absolute
+	width: 55%
+	height: 40%
+	left: 22.5%
+	top: 30%
+
+.gameMenu_abilitiesMenu_item
+	position: absolute
+	width: 20%
+	height: 40%
+	border-radius: 1000px
+	overflow: hidden
+	display: none
+
+.gameMenu_abilitiesMenu_item-active
+	border: solid 2px #777
+
+#gameMenu_abilitiesMenu_item1
+	left: 0%
+	top: 0%
+
+#gameMenu_abilitiesMenu_item2
+	left: 27%
+	top: 0%
+
+#gameMenu_abilitiesMenu_item3
+	right: 27%
+	top: 0%
+
+#gameMenu_abilitiesMenu_item4
+	right: 0%
+	top: 0%
+
+#gameMenu_abilitiesMenu_item5
+	left: 0%
+	bottom: 0%
+
+#gameMenu_abilitiesMenu_item6
+	left: 20%
+	bottom: 0%
+
+#gameMenu_abilitiesMenu_item7
+	left: 40%
+	bottom: 0%
+
+#gameMenu_abilitiesMenu_item8
+	left: 60%
+	bottom: 0%
+
+#gameMenu_abilitiesMenu_button
+	width: 40%
+	height: 15%
+	left: 30%
+	bottom: 5%

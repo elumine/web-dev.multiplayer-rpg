@@ -1,0 +1,183 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="client/style.css">
+  <script type="text/javascript" src='libs/jquery.js'></script>
+  <script type="text/javascript" src='client/api.js'></script>
+  <script type="text/javascript" src='client/script.js'></script>
+</head>
+<body>
+	<div id='wrapper'>
+		<video id='preloader' preload loop autoplay>
+			<source src='assets/ui/preloader.webm'>
+			<source src='assets/ui/preloader.mp4'>
+		</video>
+		<div id='globalShader'></div>
+		<img id='poster' src='assets/ui/poster.png'>
+		<div id='localizationMenu'>
+			<div id='localizationMenuWrapper_en'   class='localizationMenuWrapper pointer localizationMenuWrapperActive'>
+				<img class='localizationMenu_item' src='assets/ui/localization/en.png' value='en'>
+				<img class='localizationMenu_bg'   src='assets/ui/localization/bg.png'>
+			</div>
+			<div id='localizationMenuWrapper_ru'   class='localizationMenuWrapper pointer localizationMenuWrapperPassive'>
+				<img class='localizationMenu_item' src='assets/ui/localization/ru.png' value='ru'>
+				<img class='localizationMenu_bg'   src='assets/ui/localization/bg.png'>
+			</div>
+			<div id='localizationMenuWrapper_ua'   class='localizationMenuWrapper pointer localizationMenuWrapperPassive'>
+				<img class='localizationMenu_item' src='assets/ui/localization/ua.png' value='ua'>
+				<img class='localizationMenu_bg'   src='assets/ui/localization/bg.png'>
+			</div>
+		</div>
+		<div id='infoWindow' class='ui_field1'>
+			<div id='infoWindowRegistrationTrue'  class='hide infoWindowLabel ui_localization-wrapper'></div>
+			<div id='infoWindowRegistrationFalse' class='hide infoWindowLabel ui_localization-wrapper'></div>
+			<div id='infoWindowLoginFalse'        class='hide infoWindowLabel ui_localization-wrapper'></div>
+		</div>
+		<div id='infoBar'>
+			<div id='serverStatusWrapper'>server:&nbsp;<span id='serverStatus'></span></div>
+			<div id='gameStatusWrapper'>game:&nbsp;<span id='gameStatus'></span></div>
+			<div id='pingWrapper'>ping:&nbsp;<span id='ping'></span></div>
+			<div id='fpsWrapper'>fps:&nbsp;<span id='fps'></span></div>
+		</div>
+		<div id='authMenu' class='ui_menu'>
+			<div id='authMenu_textareaLoginWrapper' class='ui_textareaWrapper'>
+				<textarea id='authMenu_textareaLogin'    class='ui_textarea' wrap='off' rows='1' placeholder='login' autofocus></textarea>
+			</div>
+			<div id='authMenu_textareaPasswordWrapper' class='ui_textareaWrapper'>
+				<textarea id='authMenu_textareaPassword' class='ui_textarea' wrap='off' rows='1' placeholder='password'></textarea>
+			</div>
+			<div id='authMenu_buttonLogin' class='ui_button1 pointer'>
+				<div id='authMenu_buttonLoginText' class='text ui_localization-wrapper'></div>
+			</div>
+			<div id='authMenu_buttonRegister' class='ui_button2 pointer'>
+				<div id='authMenu_buttonRegisterText' class='text ui_localization-wrapper'></div>
+			</div>
+			<div id='authMenu_buttonTrailer' class='ui_button2 pointer'>
+				<div id='authMenu_buttonTrailerText' class='text ui_localization-wrapper'></div>
+			</div>
+			<div id='authMenu_backgroundScreen' class='ui_backgroundScreen'></div>
+			<video id='authMenu_background' class='ui_background' loop preload autoplay>
+				<source src='assets/ui/background/auth.mp4'>
+				<source src='assets/ui/background/auth.webm'>
+			</video>
+		</div>
+		<div id='mainMenu' class='ui_menu'>
+			<div id='mainMenu_loadWindow' class='ui_field1'>
+				<div id='mainMenu_loadWindow_header' class='underline gray-light ui_localization-wrapper'></div>
+				<div id='mainMenu_loadWindow_characters' class='gray'></div>
+			</div>
+			<div id='mainMenu_topBar' class='ui_topBar'>
+				<div id='mainMenu_buttonGameMenu' class='ui_button3 pointer'></div>
+				<div id='clientStatusWrapper'>client:&nbsp;<span id='clientStatus'></span></div>
+			</div>
+			<img id='modelSetItem1' src='assets/ui/rubick_icon.png' class='modelSetItem modelSetItemSelected' value='modelA'>
+			<img id='modelSetItem2' src='assets/ui/invoke_icon.png' class='modelSetItem' value='modelB'>
+			<div id='mainMenu_characterModel'>
+				<canvas id='mainMenu_characterModel_canvas'></canvas>
+			</div>
+			<img id='mainMenu_help' src='assets/ui/mainMenu_help.png'>
+			<div id='mainMenu_buttonJoinGame' class='ui_button1 pointer'>
+				<div id='mainMenu_buttonJoinGameText' class='text ui_localization-wrapper'></div>
+			</div>
+			<div id='mainMenu_buttonLeaveGame' class='ui_button1 pointer'>
+				<div id='mainMenu_buttonLeaveGameText' class='text ui_localization-wrapper'></div>
+			</div>
+			<div id='mainMenu_buttonTrailer' class='ui_button2 pointer'>
+				<div id='mainMenu_buttonTrailerText' class='text ui_localization-wrapper'></div>
+			</div>
+			<div id='mainMenu_buttonLogout' class='ui_button2 pointer'>
+				<div id='mainMenu_buttonLogoutText' class='text ui_localization-wrapper'></div>
+			</div>
+			<div id='mainMenu_backgroundScreen' class='ui_backgroundScreen'></div>
+			<video id='mainMenu_background' class='ui_background' loop preload autoplay>
+				<source src='assets/ui/background/main.mp4'>
+				<source src='assets/ui/background/main.webm'>
+			</video>
+		</div>
+		<div id='gameMenu' class='ui_menu'>
+			<input id='scaleRange' type="range" id="scaleRange" min="350" value='1000' max="3000">
+			<img id='anouncement_prepair' class='anouncement' src='assets/ui/anouncements/prepair.png'>
+			<img id='anouncement_fight'   class='anouncement' src='assets/ui/anouncements/fight.png'>
+			<div id='gameMenu_userBar_abilities_item_label'></div>
+			<div id='gameMenu_topBar' class='ui_topBar'>
+				<div id='gameMenu_timeBar'></div>
+				<div id='gameMenu_buttonMainMenu' class='ui_button3 pointer'></div>
+			</div>
+			<div id='gameMenu_statisticTable'></div>
+			<div id='gameMenu_statisticMenu' class='ui_field1'>
+				<div id='gameMenu_statisticMenu_header' class='underline gray-light ui_localization-wrapper'></div>
+				<div id='gameMenu_statisticMenu_wrapper' class='gray'></div>
+				<div id='gameMenu_statisticMenu_button' class='ui_button1 pointer'>
+					<div id='gameMenu_statisticMenu_buttonText' class='text ui_localization-wrapper'></div>
+				</div>
+			</div>
+			<div id='gameMenu_abilitiesMenu' class='ui_field1'>
+				<div id='gameMenu_abilitiesMenu_header' class='underline gray-light ui_localization-wrapper'></div>
+				<div id='gameMenu_abilitiesMenu_wrapper' class='gray'>
+					<img class='gameMenu_abilitiesMenu_item pointer' id='gameMenu_abilitiesMenu_item1'>
+					<img class='gameMenu_abilitiesMenu_item pointer' id='gameMenu_abilitiesMenu_item2'>
+					<img class='gameMenu_abilitiesMenu_item pointer' id='gameMenu_abilitiesMenu_item3'>
+					<img class='gameMenu_abilitiesMenu_item pointer' id='gameMenu_abilitiesMenu_item4'>
+					<img class='gameMenu_abilitiesMenu_item pointer' id='gameMenu_abilitiesMenu_item5'>
+					<img class='gameMenu_abilitiesMenu_item pointer' id='gameMenu_abilitiesMenu_item6'>
+					<img class='gameMenu_abilitiesMenu_item pointer' id='gameMenu_abilitiesMenu_item7'>
+					<img class='gameMenu_abilitiesMenu_item pointer' id='gameMenu_abilitiesMenu_item8'>
+				</div>
+				<div id='gameMenu_abilitiesMenu_button' class='ui_button1 pointer'>
+					<div id='gameMenu_abilitiesMenu_buttonText' class='text ui_localization-wrapper'></div>
+				</div>
+			</div>
+			<div id='gameMenu_userBar_effects'>
+				<img id='gameMenu_userBar_effects_item1' class='gameMenu_userBar_effects_item'>
+				<img id='gameMenu_userBar_effects_item2' class='gameMenu_userBar_effects_item'>
+				<img id='gameMenu_userBar_effects_item3' class='gameMenu_userBar_effects_item'>
+				<img id='gameMenu_userBar_effects_item4' class='gameMenu_userBar_effects_item'>
+				<img id='gameMenu_userBar_effects_item5' class='gameMenu_userBar_effects_item'>
+				<img id='gameMenu_userBar_effects_item6' class='gameMenu_userBar_effects_item'>
+				<img id='gameMenu_userBar_effects_item7' class='gameMenu_userBar_effects_item'>
+				<img id='gameMenu_userBar_effects_item8' class='gameMenu_userBar_effects_item'>
+				<img id='gameMenu_userBar_effects_item9' class='gameMenu_userBar_effects_item'>
+				<img id='gameMenu_userBar_effects_item10' class='gameMenu_userBar_effects_item'>
+			</div>
+			<div id='gameMenu_userBar'>
+				<div id='gameMenu_userBar_front'></div>
+				<div id='gameMenu_userBar_abilities'>
+					<div id='gameMenu_userBar_abilities_item1' class='gameMenu_userBar_abilities_item pointer'>
+						<div class='gameMenu_userBar_abilities_item_shader'></div>
+						<img class='gameMenu_userBar_abilities_item_bg' class='pointer'>
+					</div>
+					<div id='gameMenu_userBar_abilities_item2' class='gameMenu_userBar_abilities_item pointer'>
+						<div class='gameMenu_userBar_abilities_item_shader'></div>
+						<img class='gameMenu_userBar_abilities_item_bg' class='pointer'>
+					</div>
+					<div id='gameMenu_userBar_abilities_item3' class='gameMenu_userBar_abilities_item pointer'>
+						<div class='gameMenu_userBar_abilities_item_shader'></div>
+						<img class='gameMenu_userBar_abilities_item_bg' class='pointer'>
+					</div>
+					<div id='gameMenu_userBar_abilities_item4' class='gameMenu_userBar_abilities_item pointer'>
+						<div class='gameMenu_userBar_abilities_item_shader'></div>
+						<img class='gameMenu_userBar_abilities_item_bg' class='pointer'>
+					</div>
+					<div id='gameMenu_userBar_abilities_item5' class='gameMenu_userBar_abilities_item pointer'>
+						<div class='gameMenu_userBar_abilities_item_shader'></div>
+						<img class='gameMenu_userBar_abilities_item_bg' class='pointer'>
+					</div>
+				</div>
+				<div id='gameMenu_userBar_hp_wrapper'>
+					<canvas id='gameMenu_userBar_hp_canvas'></canvas>
+				</div>
+			</div>
+		</div>
+		<canvas id='canvas'></canvas>
+	</div>
+	<div id='soundWrapper'>
+		<audio id='soundWrapper_ui_button-click'    src='assets/sound/ui_button-click.mp3'    preload></audio>
+		<audio id='soundWrapper_announcer_prepair'  src='assets/sound/announcer_prepair.mp3'  preload></audio>
+		<audio id='soundWrapper_announcer_fight'    src='assets/sound/announcer_fight.mp3'    preload></audio>
+		<audio id='soundWrapper_announcer_end'      src='assets/sound/announcer_end.mp3'      preload></audio>
+		<audio id='soundWrapper_music_auth'     	src='assets/sound/music_auth.mp3' 		  preload loop autoplay></audio>
+		<audio id='soundWrapper_music_main'     	src='assets/sound/music_main.mp3' 		  preload loop></audio>
+		<audio id='soundWrapper_music_game'     	src='assets/sound/music_game.mp3' 		  preload loop></audio>
+	</div>
+</body>
+</html>
