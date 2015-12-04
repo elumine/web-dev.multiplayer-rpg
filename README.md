@@ -1,8 +1,6 @@
 ## Multiplayer RPG
 My first game with 2.5D isometric graphics, based on Canvas.
 + [YouTube](https://youtu.be/jYGX3UIoDM8)
-+ [Project Link](https://elumine.github.io/#/project/web-dev.multiplayer-rpg)
-+ [LinkedIn](https://www.linkedin.com/in/elumine)
 
 --
 
